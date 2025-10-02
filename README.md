@@ -1,2 +1,8 @@
-# Data Analysis Portfolio Read Me
-Data Analysis Portfolio
+# Data Analysis
+
+## Education
+MSc Psychology: Research Methods and Statistics
+BSc Applied Psychology
+
+## Work Experience
+
