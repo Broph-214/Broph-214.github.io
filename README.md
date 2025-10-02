@@ -9,5 +9,5 @@ BSc Applied Psychology
 ## Projects
 
 ### Sales Analysis
-[Superstore Sales Analysis](https://Broph-214.github.io/sales_analysis/)
+[Superstore Sales Analysis](https://broph-214.github.io/sales_analysis/)
 
