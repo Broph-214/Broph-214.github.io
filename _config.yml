@@ -1,8 +1,0 @@
-title: Luke Brophy
-
-show_downloads: false
-theme: jekyll-theme-minimal
-
-collections:
-  projects:
-    output: true
