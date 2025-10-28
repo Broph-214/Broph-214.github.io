@@ -10,6 +10,6 @@ BSc Applied Psychology
 ## Projects
 {% for project in site.projects %}
 ### [{{ project.title }}]({{ project.url }})
-{{ project.description }}
+{{ project.content | strip_html | truncate: 200 }}
 {% endfor %}
 
