@@ -8,7 +8,8 @@ BSc Applied Psychology
 ## Work Experience
 
 ## Projects
-
-### Sales Analysis
-[Superstore Sales Analysis](https://broph-214.github.io/sales_analysis/)
+{% for project in site.projects %}
+### [{{ project.title }}]({{ project.url }})
+{{ project.description }}
+{% endfor %}
 
