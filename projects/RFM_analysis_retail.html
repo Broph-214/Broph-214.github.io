@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>RFM Analysis</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FolioOne
+  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
+  * Updated: Aug 23 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.webp" alt="">
+      <h1 class="sitename">FolioOne</h1> 
+    </a> -->
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Me</a></li>
+          <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="../cv.html">CV</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://uk.linkedin.com/in/luke-brophy-07330a1b3" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Broph-214" class="github"><i class="bi bi-github"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Starter Section Section -->
+    <section id="starter-section" class="starter-section section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recency Frequency Monerary (RFM Analysis) - UCI Retail Dataset</h2>
+        <p>Python</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up">
+        <h1>Data Information</h1>
+        <p><b>Dataset Name:</b> Online Retail</p>
+        <p><b>Dataset Link:</b> <a href="https://archive.ics.uci.edu/dataset/352/online+retail">https://archive.ics.uci.edu/dataset/352/online+retail</a></p>
+        <br>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <h2>Code Link</h2>
+        <p><b>Code:</b> The link to my GitHub repository below contains the python code used to categorise segements (opens link in new tab).</p>
+        <p><b>GitHub Link:</b> <a href="https://github.com/Broph-214/portfolio_project_list/blob/main/UCI_retail_rfm_analysis.ipynb"
+          target="_blank" rel="noopener noreferrer">https://github.com/Broph-214/portfolio_project_list/blob/main/UCI_retail_rfm_analysis.ipynb</a></p>
+        <br>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <h1>Rationale</h1>
+        <p>
+          Customer segmentation is a valuable tool for businesses to have as it can identify which customers are the most and least profitable. With this, personalised experiences can be delivered to customers, meeting their needs. As customer satisfaction improves, brand loyalty and revenue for businesses can also increase.
+
+          Recency Frequency Monetary (RFM) analysis offers businesses an easily interpreted method of segmenting customers. While there are advantages for the use of clustering techniques such as K-means, clusters produced using this method may not yield actionable categories for customers.
+
+          RFM analysis allocates scores for each of the customers for each of its components:
+          <ul>
+          <li>Recency: Measuring how recent a customer has visited/made a purchase.</li>
+          <li>Frequency: How often customers visit/make purchases.</li>
+          <li>Monetary: How much is spent by the customer.</li>
+          </ul>
+
+          Scores from 1-5 are allocated by splitting the data for each factor into quintiles. For this project the Monetary and Frequency scores will be combined and customer groups will be created from 25 possible scores (1-5 Recency, 1-5 Frequency+Monetary).
+
+          This project will use the Online Retail dataset will be used from the UC Irvine Machine Learning Repository. This data contains transactions from an online retail store based in the United Kingdom. All transactions within the data take place 01/12/2010-09/12/2011.
+        </p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <h1>Analysis</h1>
+        <p>
+          Below is a heatmap of each of the customer segments. Each segment can be hovered over to display:
+
+          <ul>
+          <li>The number of customers in that segment.</li>
+          <li>Monetary: The average spend for customers in the segment.</li>
+          <li>Recency: The average number of days since the last visit (09/12/2011 - Most recent visit).</li>
+          <li>Frequency: The average number of visits for customers in that segment.</li>
+          <li>Proportion: % of total customers in that segment.</li>
+          </ul>
+        </p>    
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <iframe
+        src="../assets/html/heatmap.html"
+        title="Heatmap Showing Customer Segmentation"
+        width="100%"
+        height="650"></iframe>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <h1>Group Evaluation</h1>
+        <p>
+          <h2> Champions and Loyal Customers</h2>
+          The company's largest group is the Loyal Customers category (781 customers). It is typical for consumers in this group to purchase fairly often and spend a large amount. However, hovering over the heatmap, it can be seen that on average Loyal Customers (£3004.98) spent ~57% less than Champions (£6966.25). <br>
+          Higher value products could be pushed towards this group, possibly moving them into the Champion category.
+
+          <h2> Potential Loyalists</h2>
+          Potential Loyalists on average spent (£550.18) ~82% less than Loyal Customers and purchased less frequently (96 transactions). Other categories of products should be pushed towards this group to encourage more frequent purchases and an increase in spending.
+
+          <h2> Can't Lose Them and At Risk</h2>
+          The "Can't Lose Them" category on average had not made a purchase in over 4 months (132 days). However, these customers spent ~26% more (£3790.63) than the Loyal Customers segment. There should be an effort to bring these customers back by listening to their feedback, or suggesting newer products.<br>
+          Similar strategies can also be used for the "At Risk" group (£935.49 average spend). However, the focus should be on "Can't Lose Them" who on average, brought in more revenue (~305% more), and purchased more frequently (an average difference of 73 transactions).
+
+          <h2> Needs Attention and About to Sleep</h2>
+          The "Needs Attention" group's business can be brought back through recommending products they had bought previously. Limited offers may also help this group. The "About to Sleep" group should be recommended popular products so they aren't lost.
+
+          <h2> Promising and New Customers</h2>
+          Support could be offered to the customers in the "Promising" and "New Customers" groups such as onboarding in order to further improve the business relationship, as well as build brand awareness/loyalty. 
+
+          <h2> Hibernating</h2>
+          Finally, different marketing campaigns could be used to attempt to bring back business from the "Hibernating" group.
+        </p>    
+      </div>
+
+    </section><!-- /Starter Section Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">FolioOne</strong> <span>All Rights Reserved<br></span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
