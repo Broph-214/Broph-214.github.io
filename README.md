@@ -1,9 +1,5 @@
 # Data Analysis
 
-## Education
-MSc Psychology: Research Methods and Statistics
-
-BSc Applied Psychology
-
-## Work Experience
+## Website
+[Link](https://broph-214.github.io/)
 
