@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>UCI Retail II Dashboard</title>
+  <title>Dashboard Gallery</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -77,102 +77,25 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>UCI Retail II Dashboard</h2>
+        <h2>Dashboard Gallery</h2>
         <p>Microsoft Power BI, Power Query, DAX</p>
       </div><!-- End Section Title -->
 
       <div class="container justify-content-between gy-5 mb-5" data-aos="fade-up">
-        <h1>Dashboard</h1>
+        <h1>Energy Demand UK 2026 (Until March)</h1>
         <div class="portfolio-img">
-        <img src="../assets/img/portfolio/power_bi/uci_retail_II.JPG"
+        <img src="../assets/img/portfolio/power_bi/energy_demand_dashboard.JPG"
                 alt = "Portfolio Item"
                 class= "img-fluid">
         </div>
-        <br>
-        <p>
-          In this dashboard the following metrics were investigated: sales KPIs, revenue, average customer spend
-          and orders. Additionally the top ranked countries and products by revenue were examined.
-          This was designed as an initial business overview that would help stakeholders understand their overall performance both throughout the year,
-          and relative to the previous year. From this clients could develop further lines of inquiry with the analyst, leading to actionable insights 
-          that drive growth.
-        <br>
-          All data used in the model was collected from the Kaggle website.
-        <br>
-
-        <br>
-        </p>
-
-
-        <div class="portfolio-img">
-        <h2>Data Model</h2>
-        <img src="../assets/img/portfolio/power_bi/data_models/uci_retail_II_model.JPG"
-                alt = "Portfolio Item"
-                class= "img-fluid">
-        </div>
-        <br>
-        <p>The data was modelled using a star schema which included 4 dimension tables created to both normalise the fact table, 
-          and allow for efficient grouping and filtering.
-          <br><br>
-          A date dimension table was defined using the calendar function to ensure there was a continuous date range for the time intelligence calculation group. 
-          <br><br>
-          Additionally, a table was added for storing and organising measures. 
-        </p>
-      </div>
-
-      <div class="container justify-content-between gy-5 mb-5" data-aos="fade-up">
-        <h1>DAX Formula Examples</h1>
-        <br>
-        <h3>Revenue</h3>
-        <code>Revenue = SUMX('Sales',[Price]*[Quantity Sold])</code>
-        <br><br>
-
-        <h3>Customer Count</h3>
-        <code>Cust Count = 
-        <br>COUNTROWS(
-	      <br>FILTER(
-		    <br>SUMMARIZECOLUMNS(
-		    <br>Sales[Customer ID],
-		    <br>"rev",[Revenue]),
-		    <br>[rev]>0))</code>
-        <br><br>
-
-        <h3>Transaction Count</h3>
-        <code>Transactions = 
-        <br>COUNTROWS(
-	      <br>FILTER(
-		    <br>SUMMARIZECOLUMNS(
-		    <br>Sales[Invoice Number],
-		    <br>"rev",[Revenue]),
-		    <br>[rev]>0))</code>
-        <br><br>
-
-        <h3>Average Spend</h3>
-        <code>
-        Average Spend = AVERAGEX(Sales,[Revenue])
-        </code>
-      </div>
         
-      <div class="container justify-content-between gy-5 mb-5" data-aos="fade-up">
-        <h2>Time Intelligence Measures</h2>
-        <br>
-        <h4>Year to Date</h4>
-        <code>YTD = CALCULATE(SELECTEDMEASURE(), DATESYTD('Date Table'[Date]))</code>
-        <br><br>
-        <h4>Last Year to Date</h4>
-        <code>LYTD = 
-        <br>VAR max_date = MAX('Date Table'[Date])
-        <br>VAR max_ly = EDATE(max_date,-12) 
-        <br>VAR lytd_dates = FILTER(SAMEPERIODLASTYEAR(DATESYTD('Date Table'[Date])),'Date Table'[Date]<=max_ly)
-        <br>
-        <br>RETURN CALCULATE(SELECTEDMEASURE(),lytd_dates)</code>
-        <br><br>
-        <h4>Year-over-Year</h4>
-        <code>YOY (%) = 
-        <br>VAR CY = CALCULATE(SELECTEDMEASURE(),'Time Intelligence'[Calculation group column] = "YTD")
-        <br>VAR LY = CALCULATE(SELECTEDMEASURE(),'Time Intelligence'[Calculation group column] = "LYTD")
-        <br>RETURN DIVIDE(CY-LY,LY)</code>
+        <h4>Data Source</h4>
+        <p>
+        https://www.neso.energy/data-portal/historic-demand-data
+        </p>
+      </div>
 
-        <br><br>
+      <div class="container justify-content-between gy-5 mb-5" data-aos="fade-up">
         <a href="../portfolio.html">Return to portfolio</a>
       </div>
 
